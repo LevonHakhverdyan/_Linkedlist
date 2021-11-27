@@ -20,6 +20,8 @@ namespace _Linkedlist
             singleLinkedList.InsertAfter(singleLinkedList.head.next, "-------------");
             singleLinkedList.ReverseLinkedList();
             singleLinkedList.DeleteNodebyKey("cccc");
+            var kkk= singleLinkedList.GetNode("bbbb");
+            singleLinkedList.InsertAfter(kkk.next, "yayayayay");
             DoubleLinkedList<string> doubleLinkedList = new DoubleLinkedList<string>();
             doubleLinkedList.InsertLast("aaaa");
             doubleLinkedList.InsertLast("bbbb");
@@ -29,6 +31,9 @@ namespace _Linkedlist
             doubleLinkedList.InsertAfter(doubleLinkedList.head.next, "-----------------");
             doubleLinkedList.ReverseLinkedList();
             doubleLinkedList.DeleteNodebyKey("-----------------");
+            var node = doubleLinkedList.GetLastNode();
+            Console.WriteLine($"{node.prev.data}  {node.data}");
+            Console.ReadKey();
         }
     }
 }

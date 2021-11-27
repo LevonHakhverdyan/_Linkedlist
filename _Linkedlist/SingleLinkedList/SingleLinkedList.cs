@@ -79,6 +79,25 @@ namespace _Linkedlist.SingleLinkedList
             }
             head = prev;
         }
+        public Node<T> GetNode(T key)
+        {
+            Node<T> temp = head;
+            Node<T> prev = null;
+            if (temp != null && temp.data.Equals(key))
+            {
+                return temp;
+            }
+            while (temp != null && !temp.data.Equals(key))
+            {
+                prev = temp;
+                temp = temp.next;
+            }
+            if (temp == null)
+            {
+                throw new Exception();
+            }
+            return temp;
+        }
     }
 
 
